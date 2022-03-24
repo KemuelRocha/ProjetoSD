@@ -1,0 +1,20 @@
+#acompanhar-servico{
+    background-color: var(--cor4);
+    margin: 0px;
+    padding: 0px;
+}
+#card-acomp{
+    background-color:var(--cor1);
+   
+}
+#texto-acomp{
+    font-size: 20px;
+    color:var(--cor3);
+    font-family: 'Sanchez', serif;
+}
+
+#texto-servico-em-andamento{
+    font-size: 30px;
+    font-family: 'Sanchez', serif;
+    color:var(--cor3);
+}

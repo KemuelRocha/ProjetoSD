@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block title %}Tela Inicial{% endblock %}
+
+{% block content %}
+        <!--SLIDER-->
+        <div id="slider" class="block">
+            <div id="buscar">
+                <div class="container">
+                    <h1 class="title text-center mb-5 h1">Encontre o serviço desejado!</h1>
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Serviço">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Cidade">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row my-3">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">
+                                    Pessoa
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">
+                                    Empresa
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            ESTRELAS
+                        </div>
+                        <div class="col">
+                            EXPERIENCIA
+                        </div>
+    
+                    </div>
+                   
+                    <div id="botaopesquisar" class="mx-auto mt-5">
+     
+                        <button type="button" class="btn btn-light" >
+                            Pesquisar
+                        </button>
+                    </div>
+    
+                </div>
+            </div>
+           
+            <div id="list-services" class="mt-5 mx-auto">
+    
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Profissional</th>
+                        <th scope="col">Serviço</th>
+                        <th scope="col">Experiência</th>
+                        <th scope="col">Avaliação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                    </tbody>
+    
+                  </table>
+    
+            </div>
+    
+        </div>
+        
+        <!--//SLIDER-->
+    
+        
+    
+{% endblock %}

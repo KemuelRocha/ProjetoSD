@@ -1,0 +1,58 @@
+
+#tela-usuario {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--cor4);
+}
+
+#tela-usuario .user-name {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#tela-usuario  .icon {
+    color: white;
+    font-size: 18px;
+    transform: scaleX(-1);
+    margin-right: 5px;
+}
+
+#tela-usuario .text {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+#tela-usuario .numero-contato {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}  
+
+#tela-usuario .edit-exit-icon {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(214deg) brightness(105%) contrast(103%);
+} 
+
+#tela-usuario .divider-line {
+    height: 1px;
+    background-color: var(--cor2);
+}
+
+#tela-usuario .user-option-icon {
+    width: 35px;
+    height:35px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(214deg) brightness(105%) contrast(103%);
+}
+
+#tela-usuario .user-option {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#tela-usuario a{
+    text-decoration: none;
+}

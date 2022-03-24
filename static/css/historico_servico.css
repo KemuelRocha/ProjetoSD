@@ -1,0 +1,24 @@
+body,html{
+    font-family: 'Roboto', sans-serif;
+}
+
+#historico-servico {
+    background-color: var(--cor4);
+    margin: 0px;
+    padding: 0px;
+}
+#card{
+    background-color:var(--cor1);
+   
+}
+
+#texto{
+    font-size: 20px;
+    color:var(--cor3);
+    font-family: 'Sanchez', serif;
+}
+
+#btnGroupDrop1{
+    font-family: 'Sanchez', serif;
+}
+

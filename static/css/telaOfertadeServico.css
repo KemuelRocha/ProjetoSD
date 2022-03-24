@@ -1,0 +1,11 @@
+html, body{
+    overflow: hidden;
+}
+
+#ofertadeServico {
+    background-color: var(--cor4);
+    overflow-x: hidden;
+    margin: auto;
+}
+
+

@@ -1,0 +1,56 @@
+#login-register-main {
+    background-color: var(--cor4);
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  
+}
+
+.cadastro {
+    background-color: var(--cor4);
+ 
+}
+
+.title-bar {
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+}
+
+.title-bar h3 {
+    margin: 0px;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.904);
+}
+
+.contentt {
+    background-color: rgba(0, 0, 0, 0.904);
+}
+.content p {
+    color: white;
+}
+
+.botao {
+    background-color: var(--cor2);
+    color: var(--cor3);
+    border-radius: 5px;
+    border: none;
+    width: 140px;
+    height: 50px;
+}
+
+.botao:hover{
+    background-color: var(--btnHover);
+}
+
+.selected-btn {
+    background-color: var(--cor2);
+    color: white;
+}
+
+.unselected-btn {
+    background-color: white;
+    color: var(--cor2);
+}

@@ -1,0 +1,97 @@
+
+body, html{
+    font-family: 'Roboto', sans-serif;
+}
+
+.title{
+    font-family: 'Sanchez', serif;
+}
+
+#header{
+    width: 100%;
+    background-color: var(--cor1);
+    transition: background ease-out 0.2s;
+    height: 70px;
+}
+
+#header .navbar-collapse{
+    width: auto;
+    flex-grow: unset;
+}
+
+#header .nav-link{
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: solid 4px transparent;
+    color: var(--cor3)
+}
+
+#header .nav-link:hover{
+    border-bottom:solid 3px var(--cor2);
+}
+
+#slider{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    /* adicionando imagem de fundo */
+    background: url="{%static 'assets/logo.png'%}";
+    background-size: cover;
+}
+
+#buscar{
+    position:relative;
+    margin: auto;
+    top: 3%;
+    height: 40vh;
+    width: 40vw;
+    background: url(../images/fundotransparente.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color:var(--cor3);
+    font-size: 25px;
+}
+
+label{
+    color:var(--cor3);
+    font-size: 15px;
+}
+
+#list-services {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor4)
+}
+
+#list-services table{
+    
+  color: white;
+}
+
+#list-services tbody tr:hover{
+    background-color: var(--cor2);
+    color: var(--cor3);
+   
+}
+
+#list-services table tbody {
+    font-weight: 400;
+   
+}
+
+#botaopesquisar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
