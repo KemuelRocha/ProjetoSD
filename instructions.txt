@@ -1,0 +1,3 @@
+execute (pip install -r requetiments) para importar todas as bibliotecas usadas para o seu vs
+
+para rodar o site: py .\magane.py runserver
