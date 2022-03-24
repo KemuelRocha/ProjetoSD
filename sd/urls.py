@@ -23,5 +23,5 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Local
     path("", include("pages.urls", namespace="pages")),
-    
+
 ]
