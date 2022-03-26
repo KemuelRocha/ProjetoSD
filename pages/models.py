@@ -11,7 +11,7 @@ class Pessoa(models.Model):
     telefone = models.IntegerField()
 
     def __str__(self):
-        return self.cpf
+        return str(self.cpf)
 
 class Endereco(models.Model):
     rua = models.CharField(max_length=255)
@@ -21,7 +21,7 @@ class Endereco(models.Model):
     estado = models.CharField(max_length=255)  
 
     def __str__(self):
-        return self.rua
+        return str(self.rua)
 
 class Profissional(models.Model):
     pessoa = models.OneToOneField("Pessoa", on_delete=models.CASCADE)
@@ -56,7 +56,7 @@ class Empresa(models.Model):
     endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.cnpj
+        return str(self.cnpj)
 
 class EmpXServ(models.Model):
     empresa_pk = models.ForeignKey("Empresa", on_delete=models.CASCADE)
