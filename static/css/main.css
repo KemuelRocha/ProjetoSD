@@ -9,3 +9,27 @@
 @import url(./historico_servico.css);
 @import url(./acompanharServico.css);
 @import url(./responsive.css);
+
+#header{
+    width: 100%;
+    background-color: var(--cor1);
+    transition: background ease-out 0.2s;
+    height: 70px;
+}
+
+#header .navbar-collapse{
+    width: auto;
+    flex-grow: unset;
+}
+
+#header .nav-link{
+    font-weight: 500;
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: solid 4px transparent;
+    color: var(--cor3)
+}
+
+#header .nav-link:hover{
+    border-bottom:solid 3px var(--cor2);
+}

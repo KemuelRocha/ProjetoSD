@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block title %}Entre/Cadastre-se{% endblock %}
 
 {% block content %}
@@ -20,21 +22,22 @@
                         Preencha os campos abaixo e faça o login
                     </p>
     
-                    <form>
-    
-                        <div class="col">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{form|crispy}}
+                        <!-- <div class="col">
                             <input type="text" class="form-control mb-5" placeholder="E-mail">
                         </div>
                         <div class="col">
                             <input type="password" class="form-control mb-5" placeholder="Senha">
+                        </div> -->
+                        <div id="botaopadrao" class="mx-auto mt-5 mb-5">
+                            <button type="submit" class="botao">
+                                Entrar
+                            </button>
                         </div>
-    
                     </form>
-                    <div id="botaopadrao" class="mx-auto mt-5 mb-5">
-                        <button type="button" class="botao">
-                            Entrar
-                        </button>
-                    </div>
+
                 </div>
     
             </div>

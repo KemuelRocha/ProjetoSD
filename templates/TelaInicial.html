@@ -4,11 +4,22 @@
 
 {% block content %}
 
+<!-- <div id="tela-inicial" class="container-fluid vh-100">
+
+    <div class="container d-flex align-items-center">
+        <div class="filtro-servico col-6">
+            qwe
+        </div>
+    </div>
+    
+</div> -->
+
         <!--SLIDER-->
-        <div id="slider" class="container-fluid vh-100 vw-100">
-            <div id="buscar">
-                <div class="container">
-                    <h1 class="title text-center mb-5 h1">Encontre o serviço desejado!</h1>
+        <div id="slider" class="container-fluid vh-100 t-5">
+            
+            <div id="filtro-servico" class="container col-6 ">
+                <h1 class="title text-center mb-5 h1">Encontre o serviço desejado!</h1>
+
                     <form>
                         <div class="row">
                             <div class="col">
@@ -19,6 +30,7 @@
                             </div>
                         </div>
                     </form>
+
                     <div class="row my-3">
                         <div class="col">
                             <div class="form-check form-check-inline">
@@ -48,14 +60,15 @@
                     </div>
                    
                     <div id="botaopesquisar" class="mx-auto mt-5">
-     
+    
+
                         <button type="button" class="btn btn-light" >
                             Pesquisar
                         </button>
                     </div>
-    
-                </div>
             </div>
+        
+           
            
             <div id="list-services" class="mt-5 mx-auto">
     

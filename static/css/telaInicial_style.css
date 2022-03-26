@@ -6,47 +6,16 @@ body, html{
     font-family: 'Sanchez', serif;
 }
 
-#header{
-    width: 100%;
-    background-color: var(--cor1);
-    transition: background ease-out 0.2s;
-    height: 70px;
-}
-
-#header .navbar-collapse{
-    width: auto;
-    flex-grow: unset;
-}
-
-#header .nav-link{
-    font-weight: 500;
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: solid 4px transparent;
-    color: var(--cor3)
-}
-
-#header .nav-link:hover{
-    border-bottom:solid 3px var(--cor2);
-}
-
 #slider{
-  
     /* adicionando imagem de fundo */
     background: url(../assets/fundo.svg);
     background-size: cover;
+    margin: 0px;
+    padding: 0px;
 }
 
-#buscar{
-    position:relative;
-    margin: auto;
-    top: 3%;
-    height: 40vh;
-    width: 40vw;
-    background: url(../assets/fundotransparente.svg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#filtro-servico{
+  background-color: var(--cor4);
 }
 
 h1{
@@ -70,7 +39,6 @@ label{
 }
 
 #list-services table{
-    
   color: white;
 }
 
@@ -82,7 +50,6 @@ label{
 
 #list-services table tbody {
     font-weight: 400;
-   
 }
 
 #botaopesquisar{
