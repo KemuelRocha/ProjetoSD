@@ -21,3 +21,5 @@ class LoginRegisterView(FormView):
 # def login(request):
 #     return render(request, 'TelaLoginRegister.html')
         
+class TelaUsuarioView(TemplateView):
+    template_name = "Tela_usuario.html"
