@@ -8,10 +8,9 @@ class HomePageView(TemplateView):
 
 class LoginRegisterView(FormView):
     template_name = "TelaLoginRegister.html"
-    #form_class = Cadastro
+    form_class = "Cadastro"
+    
 
-
-        
 class TelaUsuarioView(TemplateView):
     template_name = "Tela_usuario.html"
 
