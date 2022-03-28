@@ -137,7 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # django-allauth
 
-AUTH_MODEL = 'pages.Usuario'
+AUTH_MODEL = 'pages.Usuario' 
+
+AUTH_USER_MODEL = 'pages.Usuario'
+
+# NAO SEI DE DEIXA AS DUAS LINHAS ACIMA OU SO UMA ##############################################################
+
 
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
