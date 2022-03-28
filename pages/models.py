@@ -2,9 +2,16 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
+TIPO_USUARIO = (
+    ("pessoa", "Pessoa"),
+    ("profissional", "Profissional"),
+    ("empresa", "Empresa")
+)
+
 class Usuario(AbstractUser):
     endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
-    telefone = models.CharField()
+    telefone = models.CharField(max_length=12)
+    tipo_usuario = models.CharField(max_length=12,choices=TIPO_USUARIO)
 
 class Empresa(models.Model):
     usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
@@ -20,15 +27,15 @@ class Pessoa(models.Model):
     def __str__(self):
         return str(self.cpf)
 
-class Endereco(models.Model):
-    rua = models.CharField(max_length=255)
-    bairro = models.CharField(max_length=255)  
-    numero = models.IntegerField()
-    cidade = models.CharField(max_length=255)  
-    estado = models.CharField(max_length=255)  
+ESTADOS = (
+        ("BA", "Bahia"),
+        ("PE", "Pernambuco")
+    )
 
-    def __str__(self):
-        return str(self.rua)
+class Endereco(models.Model):
+    cidade = models.CharField(max_length=255)  
+    estado = models.CharField(max_length=2,choices=ESTADOS)  
+    
 
 class Profissional(models.Model):
     pessoa = models.OneToOneField("Pessoa", on_delete=models.CASCADE)
