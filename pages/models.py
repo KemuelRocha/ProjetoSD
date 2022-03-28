@@ -26,6 +26,9 @@ class Endereco(models.Model):
 class Profissional(models.Model):
     pessoa = models.OneToOneField("Pessoa", on_delete=models.CASCADE)
 
+    def __str__(self):
+        return  str(f'{self.pessoa.nome} | {self.pessoa.cpf}')
+
 class Servico(models.Model):
     PERIODO_CHOICES = (
         ("Hora", "Pagamento por hora"),
