@@ -1,14 +1,21 @@
 from django.db import models
-
+from django.contrib.auth.models import AbstractUser
 # Create your models here.
 
-class Pessoa(models.Model):
-    cpf = models.IntegerField(primary_key=True)
+class Usuario(AbstractUser):
     endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
-    nome = models.CharField(max_length=255)   
-    email = models.EmailField(max_length=255)
-    senha = models.CharField(max_length=255)
-    telefone = models.IntegerField()
+    telefone = models.CharField()
+
+class Empresa(models.Model):
+    usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
+    cnpj = models.IntegerField()
+
+    def __str__(self):
+        return str(self.cnpj)
+
+class Pessoa(models.Model):
+    usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
+    cpf = models.IntegerField(primary_key=True)
 
     def __str__(self):
         return str(self.cpf)
@@ -52,14 +59,6 @@ class ContratoPessXProf(models.Model):
     pessoa_pk = models.ForeignKey("Pessoa", on_delete=models.CASCADE)
     data = models.DateField(auto_now=True)
     duracaoHora = models.IntegerField()
-
-class Empresa(models.Model):
-    nome = models.CharField(max_length=255) 
-    cnpj = models.IntegerField()
-    endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
-
-    def __str__(self):
-        return str(self.cnpj)
 
 class EmpXServ(models.Model):
     empresa_pk = models.ForeignKey("Empresa", on_delete=models.CASCADE)
