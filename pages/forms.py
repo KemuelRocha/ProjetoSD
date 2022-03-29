@@ -5,6 +5,7 @@ from django import forms
 
 class Cadastro(forms.Form):
     ESTADOS = (
+        ("SL", "Selecione"),
         ("BA", "Bahia"),
         ("PE", "Pernambuco")
     )
@@ -12,9 +13,9 @@ class Cadastro(forms.Form):
     nome = forms.CharField()
     email = forms.EmailField(required=True)#require True para que seja obrigado receber o email
     senha = forms.CharField(widget=forms.PasswordInput())
-    senha2 = forms.CharField(widget=forms.PasswordInput())
+    confirmar_senha = forms.CharField(widget=forms.PasswordInput())
     telefone = forms.CharField(max_length=12)
-    cpf = forms.IntegerField(max_value=11)
+    cpf = forms.CharField()
     cnpj = forms.IntegerField()
     cidade = forms.CharField()
     estado = forms.ChoiceField(choices=ESTADOS)
