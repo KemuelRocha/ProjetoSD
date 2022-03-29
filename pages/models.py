@@ -7,10 +7,21 @@ TIPO_USUARIO = (
     ("empresa", "Empresa")
 )
 
+ESTADOS = (
+    ("BA", "Bahia"),
+    ("PE", "Pernambuco")
+)
+
+
 class Usuario(AbstractUser):
-    endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
+    #endereco = models.OneToOneField("Endereco", on_delete=models.CASCADE)
     telefone = models.CharField(max_length=12)
     tipo_usuario = models.CharField(max_length=12,choices=TIPO_USUARIO)
+
+class Endereco(models.Model):
+    usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, blank=True, null=True, related_query_name="usuario")
+    cidade = models.CharField(max_length=255)  
+    estado = models.CharField(max_length=2,choices=ESTADOS)  
 
 class Empresa(models.Model):
     usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
@@ -25,16 +36,6 @@ class Pessoa(models.Model):
 
     def __str__(self):
         return str(self.cpf)
-
-ESTADOS = (
-        ("BA", "Bahia"),
-        ("PE", "Pernambuco")
-    )
-
-class Endereco(models.Model):
-    id = models.IntegerField(primary_key=True)
-    cidade = models.CharField(max_length=255)  
-    estado = models.CharField(max_length=2,choices=ESTADOS)  
     
 
 class Profissional(models.Model):
