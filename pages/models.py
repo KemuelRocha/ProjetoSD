@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 # Create your models here.
-
 TIPO_USUARIO = (
     ("pessoa", "Pessoa"),
     ("profissional", "Profissional"),
@@ -15,7 +14,7 @@ class Usuario(AbstractUser):
 
 class Empresa(models.Model):
     usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
-    cnpj = models.IntegerField()
+    cnpj = models.IntegerField(primary_key=True)
 
     def __str__(self):
         return str(self.cnpj)

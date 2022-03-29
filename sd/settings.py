@@ -39,15 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "django.contrib.sites",
     'crispy_forms',
-    
-    # 3 rd party
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
+    'pages',
     
     
-    # local
-    "pages.apps.PagesConfig",
 ]
 
 MIDDLEWARE = [
@@ -136,8 +130,6 @@ STATICFILES_DIRS = [BASE_DIR, 'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # django-allauth
-
-AUTH_MODEL = 'pages.Usuario' 
 
 AUTH_USER_MODEL = 'pages.Usuario'
 
