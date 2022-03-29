@@ -8,4 +8,4 @@ class Cadastro(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ('username', 'email', 'password1', 'password2', 'numero', 'cpf')
+        fields = ('username', 'email', 'password1', 'password2', 'telefone', 'cpf')
