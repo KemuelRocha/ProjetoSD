@@ -1,25 +1,22 @@
 from django.views.generic import TemplateView, FormView
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .forms import Cadastro
 
 class HomePageView(TemplateView):
     template_name = "TelaInicial.html"
 
-class LoginRegisterView(FormView):
-    template_name = "TelaLoginRegister.html"
-    form_class = "Cadastro"
-    
+class LoginView(FormView):
+    template_name = "tela_login.html"
+    form_class = "Login"
+
+# class CadastroView(TemplateView):
+#     template_name = "tela_cadastro.html"
+#     form = Cadastro()
+
+def CadastroView(request):
+    form = Cadastro()
+    return render(request, "tela_cadastro.html", {'form': form})   
+
 class TelaUsuarioView(TemplateView):
     template_name = "Tela_usuario.html"
-
-    # if request.method == "GET":
-    # else:
-    #     email = request.POST.get('email')
-    #     HttpResponse(email)
-
-# def cadastro(request):
-#     return render(request, 'TelaLoginRegister.html')
-
-# def login(request):
-#     return render(request, 'TelaLoginRegister.html')
