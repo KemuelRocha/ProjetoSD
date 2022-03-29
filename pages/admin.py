@@ -9,7 +9,7 @@ from .models import Usuario, Endereco, ContratoEmpXPess, ContratoEmpXProf, Contr
 # )
 # UserAdmin.fieldsets = tuple(ADICIONAR_CAMPOS)
 
-admin.site.register(Usuario,UserAdmin)
+admin.site.register(Usuario, UserAdmin)
 admin.site.register(Endereco)
 admin.site.register(ContratoEmpXPess)
 admin.site.register(ContratoEmpXProf)

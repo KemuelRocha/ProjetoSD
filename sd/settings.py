@@ -136,10 +136,10 @@ AUTH_USER_MODEL = 'pages.Usuario'
 # NAO SEI DE DEIXA AS DUAS LINHAS ACIMA OU SO UMA ##############################################################
 
 
-AUTHENTICATION_BACKENDS = [
-    "django.contrib.auth.backends.ModelBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
-]
+# AUTHENTICATION_BACKENDS = [
+#     "django.contrib.auth.backends.ModelBackend",
+#     "allauth.account.auth_backends.AuthenticationBackend",
+# ]
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = "/"
