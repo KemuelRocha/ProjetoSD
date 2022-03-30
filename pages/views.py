@@ -30,3 +30,12 @@ class CadastroView(FormView):
 
 class TelaUsuarioView(TemplateView):
     template_name = "Tela_usuario.html"
+
+class CadastrarPessoaView(TemplateView):
+    template_name = "tela_cadastrar_pessoa.html"
+
+class CadastrarEmpresaView(TemplateView):
+    template_name = "tela_cadastrar_empresa.html"
+    
+class CadastrarProfissionalView(TemplateView):
+    template_name = "tela_cadastrar_profissional.html"
