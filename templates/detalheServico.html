@@ -2,35 +2,14 @@
 
 {% load crispy_forms_tags %}
 
-{% block title %}Entrar{% endblock %}
+{% block title %}Detalhes do Serviço{% endblock %}
 {% load static %}
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/01b373fb7f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../css/main.css">
-    
-
-    <title>Detalhes do Serviço</title>
-</head>
-<body>
-    
-    <div id="detalhe-servico" class="container-fluid vh-100 pt-3 px-5">
+    <div id="detalhe-servico" class="container-fluid vh-100">
         
-        <div class="d-flex justify-content-end mr-5 mt-">
-            <a href=""> <i class="material-icons md-48">close</i></a>
-        </div>
-
         <div class="container px-5">
     
-            <div class="row  align-items-center">
-    
-                <img src="../images/userImg.jpg"  alt="avatar">
+            <div class="row  align-items-center">           
          
                 <div class="col">
     
@@ -117,8 +96,4 @@
         </div>
       
     </div>
-    
-</body>
-</html>
-
 {% endblock %}

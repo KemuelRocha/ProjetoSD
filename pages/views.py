@@ -35,7 +35,7 @@ class CadastrarEmpresaView(TemplateView):
 class CadastrarProfissionalView(TemplateView):
     template_name = "tela_cadastrar_profissional.html"
 
-class DetalheServico(TemplateView):
+class DetalheServicoView(TemplateView):
     template_name = 'detalheServico.html'
 
 class OferecerServicoView(TemplateView):
@@ -43,3 +43,6 @@ class OferecerServicoView(TemplateView):
 
 class AcompanharServicoView(TemplateView):
     template_name = 'acompanharServico.html'
+    
+class HistoricoServicoView(TemplateView):
+    template_name = 'tela_historico_servico.html'
