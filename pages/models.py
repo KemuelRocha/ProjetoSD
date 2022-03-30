@@ -14,7 +14,7 @@ ESTADOS = (
 )
 
 class Usuario(AbstractUser):
-    telefone = models.CharField(max_length=12)
+    telefone = models.CharField(max_length=16)
     tipo_usuario = models.CharField(max_length=12,choices=TIPO_USUARIO)
 
 class Endereco(models.Model):
