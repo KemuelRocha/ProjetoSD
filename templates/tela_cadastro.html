@@ -10,7 +10,7 @@
     
     <div class="row justify-content-around d-flex align-items-center">
 
-        <div class=" container mt-5 col-5 g-0">
+        <div class=" container mt-3 col-7 g-0">
             
             <div class="title-bar d-flex justify-content-center">
                 <h3 class="py-2">Cadastro</h3>
@@ -22,26 +22,29 @@
                     <button type="button" class="btn selected-btn">Pessoa</button>
                     <button type="button" class="btn unselected-btn">Empresa</button>
                 </div>
-        
+                
                 <form  method='POST'>
                     {%csrf_token%}
-                    <div class="col">
-                        <!-- <input type="text" class="form-control mb-4" placeholder="Nome completo"> -->
-                        {{ form.nome|as_crispy_field }}
-                    </div>
-        
-                    <div class="col">
-                        <input type="text" class="form-control mb-4" placeholder="E-mail">
-                    </div>
-        
                     <div class="row">
                         
                         <div class="col">
-                            <input type="password" class="form-control mb-4" placeholder="Senha">
+                            {{ form.nome|as_crispy_field }}
                         </div>
         
                         <div class="col">
-                            <input type="text" class="form-control mb-4" placeholder="Digíte a senha novamente">
+                            {{ form.email|as_crispy_field }}
+                        </div>
+        
+                    </div>
+                            
+                    <div class="row">
+                        
+                        <div class="col">
+                            {{ form.senha|as_crispy_field }}
+                        </div>
+        
+                        <div class="col">
+                            {{ form.confirmar_senha|as_crispy_field }}
                         </div>
         
                     </div>
@@ -49,18 +52,29 @@
                     <div class="row">
         
                         <div class="col">
-                            <input type="text" class="form-control mb-4" placeholder="Telefone comercial">
+                            {{ form.telefone|as_crispy_field }}
                         </div>
         
                         <div class="col">
-                            <input type="text" class="form-control mb-4" placeholder="CPF">
+                            {{ form.cpf|as_crispy_field }}
+                        </div>   
+        
+                    </div>
+                    <div class="row">
+        
+                        <div class="col">
+                            {{ form.cidade|as_crispy_field }}
+                        </div>
+        
+                        <div class="col">
+                            {{ form.estado|as_crispy_field }}
                         </div>   
         
                     </div>
         
                     
-                    <div id="botaopadrao" class="mx-auto mt-5 mb-5">
-                        <button type="submit" class="botao">
+                    <div id="botaopadrao" class="mx-auto mt-3 mb-3">
+                        <button type="submit"  class="botao">
                             Cadastrar
                         </button>
                     </div>
