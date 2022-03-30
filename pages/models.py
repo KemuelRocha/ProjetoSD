@@ -24,7 +24,7 @@ class Endereco(models.Model):
     estado = models.CharField(max_length=2,choices=ESTADOS)  
 
 class Empresa(models.Model):
-    usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
+    #usuario = models.OneToOneField("Usuario", on_delete=models.CASCADE)
     cnpj = models.IntegerField(primary_key=True)
 
     def __str__(self):
