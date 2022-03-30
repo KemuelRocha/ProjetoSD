@@ -135,8 +135,9 @@ AUTH_USER_MODEL = 'pages.Usuario'
 
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "pages:tela_usuario"
 
+LOGIN_URL = 'pages:login'
 
 # django-crispy-forms
 

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Cadastro{% endblock %}
+
+{% block content %}
+
+<div id="login-register-main" class="container-fluid vh-100"> 
+    
+    <div class="row justify-content-around d-flex align-items-center">
+
+        <div class=" container mt-3 col-7 g-0">
+            
+            <div class="title-bar d-flex justify-content-center">
+                <h3 class="py-2">Cadastro Profissional</h3>
+            </div>
+
+            <div class="contentt d-flex flex-column justify-content-center px-4">              
+                <form  method='POST'>
+                    {%csrf_token%}
+                    addslashesdas
+                    dasda
+                    ads
+                    
+                    <div id="botaopadrao" class="mx-auto mt-3 mb-3">
+                        <button type="submit"  class="botao">
+                            Cadastrar
+                        </button>
+                    </div>
+                </form>
+        
+        
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
+{% endblock %}

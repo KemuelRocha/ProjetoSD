@@ -22,14 +22,14 @@
                         Preencha os campos abaixo e faça o login
                     </p>
     
-                    <form method="post">
+                    <form method="post" action="">
                         {% csrf_token %}
                         {{form|crispy}}
                        
                         <a href="{% url 'pages:cadastro' %}" >Não sou cadastrado</a>
 
                         <div id="botaopadrao" class="mx-auto mt-5 mb-5">
-                            <button type="submit" class="botao">
+                            <button type="submit"  class="botao">
                                 Entrar
                             </button>
                         </div>
