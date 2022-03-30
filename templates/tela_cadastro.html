@@ -10,7 +10,7 @@
     
     <div class="row justify-content-around d-flex align-items-center">
 
-        <div class=" container mt-3 col-7 g-0">
+        <div class=" container mt-5 col-5 g-0">
             
             <div class="title-bar d-flex justify-content-center">
                 <h3 class="py-2">Cadastro</h3>
@@ -18,62 +18,11 @@
 
             <div class="contentt d-flex flex-column justify-content-center px-4">
         
-                <div class="btn-group my-5 w-50 mx-auto" role="group" >
-                    <button type="button" class="btn selected-btn">Pessoa</button>
-                    <button type="button" class="btn unselected-btn">Empresa</button>
-                </div>
-                
                 <form  method='POST'>
                     {%csrf_token%}
-                    <div class="row">
-                        
-                        <div class="col">
-                            {{ form.nome|as_crispy_field }}
-                        </div>
-        
-                        <div class="col">
-                            {{ form.email|as_crispy_field }}
-                        </div>
-        
-                    </div>
-                            
-                    <div class="row">
-                        
-                        <div class="col">
-                            {{ form.senha|as_crispy_field }}
-                        </div>
-        
-                        <div class="col">
-                            {{ form.confirmar_senha|as_crispy_field }}
-                        </div>
-        
-                    </div>
-        
-                    <div class="row">
-        
-                        <div class="col">
-                            {{ form.telefone|as_crispy_field }}
-                        </div>
-        
-                        <div class="col">
-                            {{ form.cpf|as_crispy_field }}
-                        </div>   
-        
-                    </div>
-                    <div class="row">
-        
-                        <div class="col">
-                            {{ form.cidade|as_crispy_field }}
-                        </div>
-        
-                        <div class="col">
-                            {{ form.estado|as_crispy_field }}
-                        </div>   
-        
-                    </div>
-        
+                    {{ form|crispy }}
                     
-                    <div id="botaopadrao" class="mx-auto mt-3 mb-3">
+                    <div id="botaopadrao" class="mx-auto mt-4 mb-3">
                         <button type="submit"  class="botao">
                             Cadastrar
                         </button>
@@ -91,3 +40,47 @@
 
 
 {% endblock %}
+
+<!-- <div class="row mt-4">
+                        
+    <div class="col mb-2">
+        {{ form.nome|as_crispy_field }}
+    </div>
+
+</div>
+        
+<div class="row mb-2">
+    
+    <div class="col">
+        {{ form.senha|as_crispy_field }}
+    </div>
+
+    <div class="col">
+        {{ form.confirmar_senha|as_crispy_field }}
+    </div>
+
+</div>
+
+<div class="row mb-2">
+
+    <div class="col">
+        {{ form.telefone|as_crispy_field }}
+    
+    </div>
+    <div class="col">
+        {{ form.email|as_crispy_field }}
+    </div>
+  
+
+</div>
+<div class="row mb-2">
+
+    <div class="col">
+        {{ form.cidade|as_crispy_field }}
+    </div>
+
+    <div class="col">
+        {{ form.estado|as_crispy_field }}
+    </div>   
+
+</div> -->
