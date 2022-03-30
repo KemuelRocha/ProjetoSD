@@ -10,7 +10,6 @@ class Cadastro(UserCreationForm):
         fields = ('tipo_usuario', 'username', 'password1', 'password2', 'email', 'telefone',  'email')
 
 
-
 # class Cadastro(forms.Form):
 #     nome = forms.CharField()
 #     email = forms.EmailField(required=True)#require True para que seja obrigado receber o email
