@@ -1,6 +1,6 @@
 #login-register-main {
     background-color: var(--cor4);
-    overflow: hidden;
+    overflow: auto;
     margin: 0px;
     padding: 0px;
 }

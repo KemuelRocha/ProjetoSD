@@ -5,6 +5,20 @@ from .forms import Cadastro
 from .models import Usuario
 
 
+def login_user(request):
+    logout(request)
+    username = password = ''
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                return HttpResponseRedirect('/main/')
+    return render_to_response('login.html', context_instance=RequestContext(request))
+
 class HomePageView(TemplateView):
     template_name = "TelaInicial.html"
 
@@ -19,15 +33,13 @@ class CadastroView(FormView):
     def get_success_url(self):
         return reverse('pages:login') 
 
-class TelaUsuarioView(DetailView):
+class TelaUsuarioView(TemplateView):
     template_name = "Tela_usuario.html"
-    model = Usuario
 
-    def post(self, request, *args, **kwargs):
-        request.path = f'usuario/{request.user.pk}'
-        return super().get(request, *args, **kwargs)
+    # def post(self, request, *args, **kwargs):
+    #     request.path = f'usuario/{request.user.pk}'
+    #     return super().get(request, *args, **kwargs)
            
-
 class CadastrarPessoaView(TemplateView):
     template_name = "tela_cadastrar_pessoa.html"
 
