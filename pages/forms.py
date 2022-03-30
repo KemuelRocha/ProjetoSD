@@ -1,8 +1,17 @@
-
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 from django import forms
 from crispy_forms.helper import FormHelper
+
+class UserAdminCreationForm(UserCreationForm):
+    class Meta:
+        model = Usuario
+        fields = ['username','email']
+
+class UserAdminForm(forms.ModelForm):
+    class Meta:
+        model = Usuario
+        fields = ['username','email','is_active','is_staff']
 
 class Cadastro(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput)
@@ -27,7 +36,7 @@ class Cadastro(UserCreationForm):
 
     class Meta:
         model = Usuario
-        fields = ('tipo_usuario', 'username', 'password1', 'password2', 'email', 'telefone',  'email')
+        fields = ('tipo_usuario', 'username', 'password1', 'password2', 'email', 'telefone',)
 
 
 # class Cadastro(forms.Form):

@@ -2,8 +2,12 @@ from django.views.generic import TemplateView, FormView, DetailView
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
 from .forms import Cadastro
-from .models import Usuario
+from .models import Usuario, Endereco
 
+def finalizeRegister(request):
+    if not(Endereco.objects.filter(usuario__id=request.user.id)):
+        return redirect('pages:tela_cadastrar_' + request.user.tipo_usuario)
+    return redirect('pages:TelaInicial')
 
 class HomePageView(TemplateView):
     template_name = "TelaInicial.html"
@@ -11,7 +15,6 @@ class HomePageView(TemplateView):
 class CadastroView(FormView):
     template_name = "tela_cadastro.html"
     form_class = Cadastro
-    
 
     def form_valid(self, form):
         form.save()
