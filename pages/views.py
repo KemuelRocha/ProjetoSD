@@ -4,10 +4,10 @@ from django.http import HttpResponse
 from .forms import Cadastro
 from .models import Usuario, Endereco
 
-def finalizeRegister(request):
-    if not(Endereco.objects.filter(usuario__id=request.user.id)):
-        return redirect('pages:tela_cadastrar_' + request.user.tipo_usuario)
-    return redirect('pages:TelaInicial')
+# def finalizeRegister(request):
+#     if not(Endereco.objects.filter(usuario__id=request.user.id)):
+#         return redirect('pages:tela_cadastrar_' + request.user.tipo_usuario)
+#     return redirect('pages:TelaInicial')
 
 class HomePageView(TemplateView):
     template_name = "TelaInicial.html"

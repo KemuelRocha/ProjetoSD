@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth import views as auth_view
-from .views import HomePageView, CadastroView, TelaUsuarioView, CadastrarEmpresaView, CadastrarProfissionalView, CadastrarPessoaView, OferecerServicoView, AcompanharServicoView, finalizeRegister, DetalheServicoView, HistoricoServicoView
+from .views import HomePageView, CadastroView, TelaUsuarioView, CadastrarEmpresaView, CadastrarProfissionalView, CadastrarPessoaView, OferecerServicoView, AcompanharServicoView, DetalheServicoView, HistoricoServicoView
 from django.conf.urls import include
 from django.contrib.auth import authenticate, login
 
@@ -17,7 +17,7 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('oferecer_servico', OferecerServicoView.as_view(), name='oferecer_servico'),
     path('acompanhar_servico', AcompanharServicoView.as_view(), name='acompanhar_servico'),
-    path('finalizaRegister', finalizeRegister, name='finalizaRegister'),
+    # path('finalizaRegister', finalizeRegister, name='finalizaRegister'),
     path('detalhe_servico', DetalheServicoView.as_view(), name='detalhe_servico'),
     path('historico_servico', HistoricoServicoView.as_view(), name='historico_servico'),
 ]
