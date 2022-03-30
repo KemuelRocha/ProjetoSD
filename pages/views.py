@@ -11,6 +11,7 @@ class HomePageView(TemplateView):
 class CadastroView(FormView):
     template_name = "tela_cadastro.html"
     form_class = Cadastro
+    
 
     def form_valid(self, form):
         form.save()
@@ -30,3 +31,12 @@ class CadastrarEmpresaView(TemplateView):
     
 class CadastrarProfissionalView(TemplateView):
     template_name = "tela_cadastrar_profissional.html"
+
+class DetalheServico(TemplateView):
+    template_name = 'detalheServico.html'
+
+class OferecerServicoView(TemplateView):
+    template_name = 'ofertadeServico.html'
+
+class AcompanharServicoView(TemplateView):
+    template_name = 'acompanharServico.html'

@@ -2,8 +2,28 @@
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario
 from django import forms
+from crispy_forms.helper import FormHelper
 
 class Cadastro(UserCreationForm):
+    password1 = forms.CharField(widget=forms.PasswordInput)
+    password2 = forms.CharField(widget=forms.PasswordInput)
+    def __init__(self, *args, **kwargs):
+        super(Cadastro, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+
+        for fieldname in ['password1', ]:
+            self.fields[fieldname].help_text = None
+        
+        for fieldname in ['password2', ]:
+            self.fields[fieldname].help_text = None
+
+        for fieldname in ['username', ]:
+            self.fields[fieldname].help_text = None
+
+        for key in self.fields:
+            self.fields[key].required = True
+
+        self.helper.form_show_errors = False
 
     class Meta:
         model = Usuario
